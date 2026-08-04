@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ankush Kumar Sharma — Space Theme Data Analytics Portfolio</title>
+  <meta name="description" content="Explore Ankush's space data station featuring interactive planetary navigation, black hole visualizer, SQL telemetry console, and industrial training at Tata Tinplate.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Orbitron:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Separate Modular Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- COSMIC CANVAS ENGINE BACKGROUND -->
+  <canvas id="starfield"></canvas>
+  <div class="cosmic-nebula-overlay"></div>
+  <div class="space-grid-bg"></div>
+  <div class="cursor-star-glow" id="cursorGlow"></div>
+
+  <!-- NAVIGATION BAR -->
+  <nav>
+    <div class="container">
+      <a href="#" class="brand-logo">
+        <div class="cosmic-icon"><i class="fa-solid fa-user-astronaut"></i></div>
+        ANKUSH <span>CORE</span>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="#about"><i class="fa-solid fa-compass"></i> About</a></li>
+        <li><a href="#skills"><i class="fa-solid fa-atom"></i> Skills</a></li>
+        <li><a href="#qualifications"><i class="fa-solid fa-graduation-cap"></i> Academic</a></li>
+        <li><a href="#training"><i class="fa-solid fa-industry"></i> Training</a></li>
+        <li><a href="#achievements"><i class="fa-solid fa-trophy"></i> Honors</a></li>
+        <li><a href="#contact" class="nav-btn-comm"><i class="fa-solid fa-satellite-dish"></i> Contact Core</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO SECTOR WITH BLACK HOLE SINGULARITY VISUALIZER -->
+  <header class="hero-sector" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="space-hud-badge">
+            <div class="hud-dot"></div>
+            <span>STATION ONLINE • DATA ANALYTICS PROTOCOL v3.4</span>
+          </div>
+          
+          <h1 class="cosmic-title">
+            Exploring Data Galaxies with <span class="gradient-text">Ankush Kumar Sharma</span>
+          </h1>
+          
+          <p class="hero-description">
+            3rd Year Computer Science & Engineering Undergraduate specializing in <strong>Data Analytics, Advanced Excel, Tableau, Power BI, SQL Queries, and C++ Algorithms</strong>. Currently undergoing Industrial Training at <strong>Tata Tinplate CTC</strong>.
+          </p>
+
+          <div class="cta-group">
+            <a href="#planet-system" class="btn-cosmic">
+              <i class="fa-solid fa-rocket"></i> Launch Solar System
+            </a>
+            <a href="#contact" class="btn-cosmic ghost">
+              <i class="fa-solid fa-paper-plane"></i> Contact Candidate
+            </a>
+          </div>
+        </div>
+
+        <!-- BLACK HOLE SINGULARITY HERO MODULE -->
+        <div class="black-hole-wrapper">
+          <div class="black-hole-container">
+            <div class="black-hole-aura"></div>
+            <div class="accretion-disk"></div>
+            <div class="singularity-core"></div>
+            <div class="photon-ring"></div>
+            
+            <div class="tech-orbit">
+              <div class="orbit-badge b1"><span>📊 Advanced Excel</span></div>
+              <div class="orbit-badge b2"><span>📈 Tableau & Power BI</span></div>
+              <div class="orbit-badge b3"><span>💾 SQL Analytics</span></div>
+              <div class="orbit-badge b4"><span>⚡ C++ & Data Structures</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- INTERACTIVE SOLAR SYSTEM PLANETARY NAVIGATOR -->
+  <section class="planet-system-section" id="planet-system">
+    <div class="container">
+      <div class="section-header">
+        <span class="sub-tag">COSMIC ORBITAL NAVIGATION</span>
+        <h2>Solar System Explorer</h2>
+        <p>Click any orbiting planet or control node to smooth-fly to portfolio telemetry sectors.</p>
+      </div>
+
+      <div class="solar-system-showcase">
+        <div class="planet-orbit-tracks">
+          <div class="sun-core" onclick="scrollToSector('hero')" title="Sun / Station Identity">
+            <span>SUN CORE</span>
+          </div>
+
+          <div class="orbit-path-1"></div>
+          <div class="orbit-path-2"></div>
+          <div class="orbit-path-3"></div>
+          <div class="orbit-path-4"></div>
+          <div class="orbit-path-5"></div>
+
+          <div class="planet-node p-terra" onclick="scrollToSector('about')">
+            <div class="planet-body"></div>
+            <div class="planet-label">🪐 Terra • About Me</div>
+          </div>
+
+          <div class="planet-node p-chronos" onclick="scrollToSector('skills')">
+            <div class="planet-body"></div>
+            <div class="planet-label">🪐 Chronos • Skills</div>
+          </div>
+
+          <div class="planet-node p-orbitx" onclick="scrollToSector('qualifications')">
+            <div class="planet-body"></div>
+            <div class="planet-label">🪐 Orbit-X • Academic</div>
+          </div>
+
+          <div class="planet-node p-titan" onclick="scrollToSector('training')">
+            <div class="planet-body"></div>
+            <div class="planet-label">🪐 Titan • Industrial Training</div>
+          </div>
+
+          <div class="planet-node p-apex" onclick="scrollToSector('achievements')">
+            <div class="planet-body"></div>
+            <div class="planet-label">🪐 Apex • Honors & Awards</div>
+          </div>
+        </div>
+
+        <div class="planet-bar-selector">
+          <div class="planet-pill" onclick="scrollToSector('about')"><i class="fa-solid fa-user"></i> Planet Terra (About)</div>
+          <div class="planet-pill" onclick="scrollToSector('skills')"><i class="fa-solid fa-code"></i> Planet Chronos (Skills)</div>
+          <div class="planet-pill" onclick="scrollToSector('qualifications')"><i class="fa-solid fa-graduation-cap"></i> Planet Orbit-X (Academics)</div>
+          <div class="planet-pill" onclick="scrollToSector('training')"><i class="fa-solid fa-briefcase"></i> Planet Titan (Training)</div>
+          <div class="planet-pill" onclick="scrollToSector('achievements')"><i class="fa-solid fa-award"></i> Planet Apex (Honors)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTOR 1: ABOUT ME -->
+  <section class="content-sector" id="about">
+    <div class="container">
+      <div class="sector-title-wrapper">
+        <div>
+          <h2>Planet Terra: Candidate Identity</h2>
+          <p style="color: var(--text-muted);">Career Objective & Telemetry Profile</p>
+        </div>
+        <div class="sector-id">SECTOR-01 // IDENTITY</div>
+      </div>
+
+      <div class="about-space-grid">
+        <div class="about-card-main">
+          <div class="about-highlight">
+            Motivated Data Analytics Enthusiast & Computer Science Undergraduate aiming to transform raw enterprise datasets into actionable insights.
+          </div>
+          <p>
+            Seeking a challenging role in Data Analytics to apply analytical, technical, and problem-solving skills to real-world business challenges. Eager to contribute to data-driven decision-making while expanding knowledge in advanced analytics tools and technologies.
+          </p>
+          <p>
+            Currently pursuing B.Tech in Computer Science & Engineering at Aryan Institute of Engineering & Technology (AIET), Bhubaneswar, alongside completing Industrial Training at Tata Tinplate CTC.
+          </p>
+        </div>
+
+        <div class="telemetry-pills">
+          <div class="telemetry-pill">
+            <div class="telemetry-icon"><i class="fa-solid fa-graduation-cap" style="color: var(--neon-cyan);"></i></div>
+            <div>
+              <div style="font-family: 'Orbitron', sans-serif; font-size: 0.75rem; color: var(--neon-cyan);">DEGREE PROGRAM</div>
+              <div style="color: var(--text-bright); font-weight: 600;">B.Tech CSE (3rd Year, CGPA 7.1)</div>
+            </div>
+          </div>
+
+          <div class="telemetry-pill">
+            <div class="telemetry-icon"><i class="fa-solid fa-industry" style="color: var(--neon-purple);"></i></div>
+            <div>
+              <div style="font-family: 'Orbitron', sans-serif; font-size: 0.75rem; color: var(--neon-purple);">INDUSTRIAL TRAINING</div>
+              <div style="color: var(--text-bright); font-weight: 600;">Tata Tinplate CTC (June 2025 - Feb 2026 / 2026)</div>
+            </div>
+          </div>
+
+          <div class="telemetry-pill">
+            <div class="telemetry-icon"><i class="fa-solid fa-trophy" style="color: var(--solar-gold);"></i></div>
+            <div>
+              <div style="font-family: 'Orbitron', sans-serif; font-size: 0.75rem; color: var(--solar-gold);">ACADEMIC HONORS</div>
+              <div style="color: var(--text-bright); font-weight: 600;">BPUT Tech Fest 2nd Place Winner (2026)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTOR 2: SKILLS & DATA TOOLKIT -->
+  <section class="content-sector" id="skills">
+    <div class="container">
+      <div class="sector-title-wrapper">
+        <div>
+          <h2>Planet Chronos: Technical Toolkit</h2>
+          <p style="color: var(--text-muted);">Data Analytics, Visual Analytics & Software Engineering Stack</p>
+        </div>
+        <div class="sector-id">SECTOR-02 // TOOLKIT</div>
+      </div>
+
+      <div class="skills-space-grid">
+        <div class="skill-sector-card">
+          <h3><i class="fa-solid fa-chart-pie" style="color: var(--neon-cyan);"></i> Data Analytics & BI</h3>
+          <div class="space-chips">
+            <div class="space-chip">Advanced MS Excel</div>
+            <div class="space-chip">Tableau Visualizations</div>
+            <div class="space-chip">Power BI Dashboards</div>
+            <div class="space-chip">Pivot Tables & VLOOKUP</div>
+            <div class="space-chip">Business Intelligence</div>
+          </div>
+        </div>
+
+        <div class="skill-sector-card">
+          <h3><i class="fa-solid fa-database" style="color: var(--neon-purple);"></i> Databases & Querying</h3>
+          <div class="space-chips">
+            <div class="space-chip">SQL (Structured Query Language)</div>
+            <div class="space-chip">Database Management Systems</div>
+            <div class="space-chip">Relational Schema Design</div>
+            <div class="space-chip">Data Cleaning & Transformation</div>
+          </div>
+        </div>
+
+        <div class="skill-sector-card">
+          <h3><i class="fa-solid fa-code" style="color: var(--solar-gold);"></i> Programming & Core CS</h3>
+          <div class="space-chips">
+            <div class="space-chip">C++ Programming</div>
+            <div class="space-chip">Data Structures & Algorithms</div>
+            <div class="space-chip">Problem Solving</div>
+            <div class="space-chip">Logic Building</div>
+          </div>
+        </div>
+
+        <div class="skill-sector-card">
+          <h3><i class="fa-solid fa-brain" style="color: var(--neon-green);"></i> Professional Competencies</h3>
+          <div class="space-chips">
+            <div class="space-chip">Critical Analytical Thinking</div>
+            <div class="space-chip">Effective Communication</div>
+            <div class="space-chip">Team Collaboration</div>
+            <div class="space-chip">Adaptability & Agility</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- INTERACTIVE SQL TERMINAL CONTROLLER -->
+      <div class="sql-terminal-box">
+        <div class="terminal-head">
+          <div class="terminal-dots">
+            <div class="dot-r"></div>
+            <div class="dot-y"></div>
+            <div class="dot-g"></div>
+          </div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 0.78rem; color: var(--neon-cyan);">
+            SQL TELEMETRY CONSOLE v2.4
+          </div>
+        </div>
+
+        <div class="sql-query-pills">
+          <div class="sql-pill active" onclick="runQuery('profile', event)">SELECT * FROM Candidate;</div>
+          <div class="sql-pill" onclick="runQuery('skills', event)">SELECT skill FROM Toolkit;</div>
+          <div class="sql-pill" onclick="runQuery('metrics', event)">SELECT metric FROM Performance;</div>
+          <div class="sql-pill" onclick="runQuery('training', event)">SELECT * FROM IndustrialTraining;</div>
+        </div>
+
+        <div class="terminal-body" id="terminalOutput">-- Executing query...
+SELECT * FROM Candidate WHERE name = 'Ankush Kumar Sharma';
+
++-----------------------+-------------------------------------------------+
+| Metric                | Telemetry Value                                 |
++-----------------------+-------------------------------------------------+
+| Name                  | Ankush Kumar Sharma                             |
+| Education             | B.Tech CSE (3rd Year) @ AIET Bhubaneswar         |
+| Academic Score        | 7.1 CGPA (Till 4th Semester)                    |
+| Industrial Training   | Tata Tinplate CTC (June 2025 - Feb 2026 / 2026) |
+| Top Honors            | BPUT Tech Fest 2nd Place (2026)                 |
++-----------------------+-------------------------------------------------+</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTOR 3: ACADEMIC QUALIFICATIONS -->
+  <section class="content-sector" id="qualifications">
+    <div class="container">
+      <div class="sector-title-wrapper">
+        <div>
+          <h2>Planet Orbit-X: Academic Orbit</h2>
+          <p style="color: var(--text-muted);">Educational Background & Academic Achievements</p>
+        </div>
+        <div class="sector-id">SECTOR-03 // ACADEMICS</div>
+      </div>
+
+      <div class="timeline-space">
+        <div class="timeline-space-card">
+          <div class="timeline-period">2023 — 2027 (EXPECTED)</div>
+          <div>
+            <div class="timeline-title">B.Tech in Computer Science & Engineering</div>
+            <div class="timeline-sub">Aryan Institute of Engineering & Technology (AIET), Bhubaneswar (BPUT)</div>
+          </div>
+          <div class="timeline-metric">7.1 CGPA<br><span style="font-size: 0.7rem; color: var(--text-muted); font-weight: normal;">Till 4th Sem</span></div>
+        </div>
+
+        <div class="timeline-space-card">
+          <div class="timeline-period">PASSED 2023</div>
+          <div>
+            <div class="timeline-title">Higher Secondary Education (Class 12th / CHSE)</div>
+            <div class="timeline-sub">Standard Higher Secondary Science Curriculum</div>
+          </div>
+          <div class="timeline-metric">PASSED<br><span style="font-size: 0.7rem; color: var(--text-muted); font-weight: normal;">CHSE Board</span></div>
+        </div>
+
+        <div class="timeline-space-card">
+          <div class="timeline-period">PASSED 2021</div>
+          <div>
+            <div class="timeline-title">Secondary Education (Class 10th / Matriculation)</div>
+            <div class="timeline-sub">Foundational Academic Education</div>
+          </div>
+          <div class="timeline-metric">PASSED<br><span style="font-size: 0.7rem; color: var(--text-muted); font-weight: normal;">BSE Board</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTOR 4: INDUSTRIAL TRAINING & CERTIFICATIONS -->
+  <section class="content-sector" id="training">
+    <div class="container">
+      <div class="sector-title-wrapper">
+        <div>
+          <h2>Planet Titan: Industrial Training</h2>
+          <p style="color: var(--text-muted);">Corporate Exposure & Technical Certifications</p>
+        </div>
+        <div class="sector-id">SECTOR-04 // TRAINING</div>
+      </div>
+
+      <div class="cosmic-cards-grid">
+        <div class="cosmic-card">
+          <div>
+            <div class="cosmic-card-icon"><i class="fa-solid fa-building-flag" style="color: var(--neon-cyan);"></i></div>
+            <h3>Tata Tinplate CTC Industrial Training</h3>
+            <p>Undergoing hands-on industrial exposure at Tata Tinplate CTC (June 2025 – Feb 2026 / June 2026), focusing on manufacturing data analytics, operational metrics, and industrial software engineering practices.</p>
+          </div>
+          <div class="cosmic-tag">INDUSTRIAL TRAINING</div>
+        </div>
+
+        <div class="cosmic-card">
+          <div>
+            <div class="cosmic-card-icon"><i class="fa-solid fa-certificate" style="color: var(--neon-purple);"></i></div>
+            <h3>Coursera & Deloitte Certifications</h3>
+            <p>Earned professional verified certificates in Data Analytics, Data Visualization, and Business Analytics Fundamentals from Coursera, Deloitte, and Infosys Springboard.</p>
+          </div>
+          <div class="cosmic-tag">CERTIFIED ANALYST</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTOR 5: HONORS, AWARDS & SPORTS -->
+  <section class="content-sector" id="achievements">
+    <div class="container">
+      <div class="sector-title-wrapper">
+        <div>
+          <h2>Planet Apex: Honors & Co-Curricular</h2>
+          <p style="color: var(--text-muted);">Competition Wins, Leadership & Extracurricular Activities</p>
+        </div>
+        <div class="sector-id">SECTOR-05 // HONORS</div>
+      </div>
+
+      <div class="cosmic-cards-grid">
+        <div class="cosmic-card">
+          <div>
+            <div class="cosmic-card-icon"><i class="fa-solid fa-medal" style="color: var(--solar-gold);"></i></div>
+            <h3>2nd Place — BPUT Tech Fest (2026)</h3>
+            <p>Secured 2nd position in technical project presentation & competitive coding at the prestigious BPUT Tech Fest 2026 among participating engineering colleges across Odisha.</p>
+          </div>
+          <div class="cosmic-tag">2ND PLACE WINNER</div>
+        </div>
+
+        <div class="cosmic-card">
+          <div>
+            <div class="cosmic-card-icon"><i class="fa-solid fa-laptop-code" style="color: var(--neon-green);"></i></div>
+            <h3>CodeChef Competitive Programming</h3>
+            <p>Active competitive programmer on CodeChef solving algorithmic and mathematical problems in C++ and Data Structures.</p>
+          </div>
+          <div class="cosmic-tag">COMPETITIVE CODER</div>
+        </div>
+
+        <div class="cosmic-card">
+          <div>
+            <div class="cosmic-card-icon"><i class="fa-solid fa-hands-holding-heart" style="color: var(--neon-cyan);"></i></div>
+            <h3>Volunteer — Aryan Seva Samiti NGO</h3>
+            <p>Dedicated community volunteer organizing social service drives, educational support, and environmental awareness campaigns.</p>
+          </div>
+          <div class="cosmic-tag">SOCIAL WORK</div>
+        </div>
+
+        <div class="cosmic-card">
+          <div>
+            <div class="cosmic-card-icon"><i class="fa-solid fa-table-tennis-paddle-ball" style="color: var(--neon-purple);"></i></div>
+            <h3>Sports Competitor (Badminton, Chess, Tug of War)</h3>
+            <p>Represented college in inter-departmental sports events including Badminton, Chess strategy competitions, and Tug of War.</p>
+          </div>
+          <div class="cosmic-tag">SPORTS & FITNESS</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER & CONTACT SATELLITE CORE -->
+  <footer class="space-footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand-logo" style="margin-bottom: 20px;">
+            <div class="cosmic-icon"><i class="fa-solid fa-satellite"></i></div>
+            ANKUSH <span>KUMAR SHARMA</span>
+          </div>
+          <p style="color: var(--text-muted); line-height: 1.8; max-width: 480px; margin-bottom: 28px;">
+            Ready to deploy data analytics skills, advanced SQL queries, and visual dashboards for summer internship or data analyst opportunities.
+          </p>
+          <div class="cta-group">
+            <a href="mailto:amkushsharma04@gmail.com" class="btn-cosmic">
+              <i class="fa-solid fa-envelope"></i> Send Direct Email
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-channel-list">
+          <div class="contact-channel">
+            <div class="contact-channel-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div>
+              <div style="font-size: 0.75rem; color: var(--neon-cyan); font-family: 'Orbitron';">EMAIL COMMUNICATION</div>
+              <div style="color: var(--text-bright); font-weight: 600;">amkushsharma04@gmail.com</div>
+            </div>
+          </div>
+
+          <div class="contact-channel">
+            <div class="contact-channel-icon"><i class="fa-solid fa-phone"></i></div>
+            <div>
+              <div style="font-size: 0.75rem; color: var(--neon-cyan); font-family: 'Orbitron';">TELEPHONY COMMS</div>
+              <div style="color: var(--text-bright); font-weight: 600;">+91 9798500703</div>
+            </div>
+          </div>
+
+          <div class="contact-channel">
+            <div class="contact-channel-icon"><i class="fa-brands fa-linkedin"></i></div>
+            <div>
+              <div style="font-size: 0.75rem; color: var(--neon-cyan); font-family: 'Orbitron';">LINKEDIN NETWORK</div>
+              <div style="color: var(--text-bright); font-weight: 600;">
+                <a href="https://www.linkedin.com/in/ankush-kumar-sharma-158810364" target="_blank" style="color: var(--neon-cyan); text-decoration: underline;">
+                  Ankush Kumar Sharma Profile
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>© 2026 Ankush Kumar Sharma. All Space Telemetry Rights Reserved.</div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 0.8rem; color: var(--neon-cyan);">
+          BUILT WITH HTML5 • VANILLA CSS • ES6 JAVASCRIPT
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Separate Modular Script -->
+  <script src="script.js"></script>
+</body>
+</html>
