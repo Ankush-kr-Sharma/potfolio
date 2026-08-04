@@ -2,17 +2,8 @@ name: Deploy Space Portfolio to GitHub Pages
 
 on:
   push:
-    branches: ["main", "master"]
+    branches: ["main"]
   workflow_dispatch:
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
 
 jobs:
   deploy:
@@ -21,24 +12,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Pages with PAT
-        if: ${{ secrets.PAGES_PAT != '' }}
-        uses: actions/configure-pages@v5
-        with:
-          token: ${{ secrets.PAGES_PAT }}
-          enablement: true
-
-      - name: Skip Configure Pages
-        if: ${{ secrets.PAGES_PAT == '' }}
-        run: |
-          echo "PAGES_PAT secret is not set. Skipping Pages enablement."
-          echo "If GitHub Pages is not already enabled for this repository, open repository settings and enable Pages manually."
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: '.'
-
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: .
+          clean: true
+          token: ${{ secrets.GITHUB_TOKEN }}
