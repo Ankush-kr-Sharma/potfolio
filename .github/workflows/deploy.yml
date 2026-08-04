@@ -21,10 +21,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Pages
+      - name: Setup Pages with PAT
+        if: ${{ secrets.PAGES_PAT != '' }}
         uses: actions/configure-pages@v5
         with:
-          token: ${{ github.token }}
+          token: ${{ secrets.PAGES_PAT }}
+          enablement: true
+
+      - name: Skip Configure Pages
+        if: ${{ secrets.PAGES_PAT == '' }}
+        run: |
+          echo "PAGES_PAT secret is not set. Skipping Pages enablement."
+          echo "If GitHub Pages is not already enabled for this repository, open repository settings and enable Pages manually."
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
